@@ -1,0 +1,37 @@
+pseudocode bubble sort
+procedure bubbleSort(in/out arr: array of integer)
+kamus
+    n, i, j, temp: integer
+
+algoritma
+    n := length(arr)
+    for i := 0 to n-1 do
+        for j := 0 to n-i-1 do
+            if arr[j] > arr[j+1] then
+                temp := arr[j]
+                arr[j] := arr[j+1]
+                arr[j+1] := temp
+            end if
+        end for
+    end for
+end procedure
+
+Pseudocode for selection sort
+procedure selectionSort(in/out arr: array of integer)
+kamus
+    n, i, j, min, temp: integer
+
+algoritma
+    n := length(arr)
+    for i := 0 to n-1 do
+        min := i
+        for j := i+1 to n-1 do
+            if arr[j] < arr[min] then
+                min := j
+            end if
+        end for
+        temp := arr[i]
+        arr[i] := arr[min]
+        arr[min] := temp
+    end for
+end procedure
